@@ -61,3 +61,70 @@ public class ConcreteStrategyB : IStrategyPattern
 
 ```
 
+
+
+
+
+Adapter Pattern
+
+사전의미 기계 기구등을 다목적으로 사용하기 위한 부가 기구
+
+adapter pattern은 관계가 없는 인터페이스들이 같이 일할 수 있도록 도와주는 디자인 패턴이다. 이 두 인터페이스를 이어주는 인터페이스를 adapter라 부른다. 아래 예제를 보면서 이해해보도록하자.   
+
+```c#
+public class Volt {
+    private int volts;
+
+    public Volt(int v) {
+        this.volts = v;
+    }
+
+    public int getVolts() {
+        return this.volts;
+    }
+
+    public void setVolts(int volts) {
+        this.volts = volts;
+    }
+}
+
+
+public class Socket {
+    public Volt getVolt() {
+        return new Volt(120);
+    }
+}
+
+public interface SocketAdapter {
+    public Volt get120Volt();
+    public Volt get12Volt();
+    public Volt get3Volt();
+}
+
+
+
+public class SocketObjectAdapterImpl : SocketAdapter {
+
+    private Socket sock = new Socket();
+
+    public Volt get120Volt() {
+        return sock.getVolt();
+    }
+
+    public Volt get12Volt() {
+        Volt v = sock.getVolt();
+        return convertVolt(v, 10);
+    }
+
+    public Volt get3Volt() {
+        Volt v = sock.getVolt();
+        return convertVolt(v, 40);
+    }
+
+    private Volt convertVolt(Volt v, int i) {
+        return new Volt(v.getVolts()/i);
+    }
+
+}
+```
+
