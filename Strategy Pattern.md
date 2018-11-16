@@ -128,3 +128,59 @@ public class SocketObjectAdapterImpl : SocketAdapter {
 }
 ```
 
+
+
+Template pattern
+
+알고리듬의 구조를 메소드에 정의 하고
+
+하위클래스에서 알고리듬 구조의 변경없이 알고리즘을 재정의 하는 패턴
+
+
+
+구현하려는 알고리듬이 일정한 프로세스가 있다 (여러단계로 나눌수있다)
+
+구현하려는 알고리듬이 변경 가능성이 있다.
+
+
+
+알고리듬을 여러단계로 나눈다
+
+나눠진 알고리듬의 단계를 메소드로 선언한다
+
+알고리듬을 수행할 템플릿 메소드를 만든다
+
+하위클래스에서 나눠스 메소드들을 구현한다
+
+```c#
+public class MyTemplatePatterm
+{
+    public void Play()
+    {
+    	Method1();
+        Method2();
+    }
+    protected virtual void Method1();
+    protected virtual void Method2();
+    
+}
+
+public class ConcreteTemplete : MyTemplatePattern
+{
+	override protected void Method1()
+	{
+		Console.WriteLine("Ready")
+	}
+	override protected void Method2()
+    {
+    	Console.WriteLine("Play")
+    }	
+}
+
+public class MyMainClass
+{
+	ConcreteTemplete concreteTemp = new ConreteTemp();
+    concreteTemp.Play();
+}
+```
+
