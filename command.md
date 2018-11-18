@@ -1,3 +1,5 @@
+Command Pattern : 명령을 객체화
+
 ```c#
 public class MyCommand
 {
@@ -125,5 +127,79 @@ class MyMain
         facade.Process();
     }
 }
+```
+
+migration..
+
+
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class LogManager
+{
+    private string mPath;
+    
+    public  LogManger(string path)
+    {
+        mPath = path;
+        _SetLogPath();
+    }
+    
+    public LogManger() : this(System.IO.Path.Combine(Application.Root, "Log");)
+    {}
+    
+    private void _SetLogPath()
+    {
+    	if(!System.IO.Directory.Exists(mPath))
+            System.IO.Directory.CreateDirectory(mPath));
+        string logFile = DataTime.Now.ToString("yyyyMMdd") + ".txt";
+        mPath = Path.Combine(mPath, logFile);           
+    }
+    
+    public void Write(string data)
+    {
+        try{
+        	using(StreamWriter writer = new StreamWriter(mPath, true))
+        	{
+            	writer.Write(data);
+        	}
+        }
+        catch(Exception e){
+            
+        }
+    }
+    
+    public void WriteLine(string data)
+    {
+        using(StreamWriter writer = new StreamWriter(mPath, true))
+        {
+            writer.WriteLine(DataTime.Now.ToString("yyyyMMdd HH:mm:ss\t")+ data);
+        }
+    }
+}
+                            
+class void Main
+{
+	static void Main(string [] args)
+    {
+        LogManager log = new LogManger();
+        log.WirteLine("Begin Processing...");
+        
+        for(int i = 0;  i < 10; i++)
+        {
+            log.WriteLine("Processing " + i);
+            System.Threading.Sleep(500);
+            log.WriteLine("Dond " + i );
+        }
+        
+        log.WriteLine("End Processing");
+    }
+}
+                             
 ```
 
