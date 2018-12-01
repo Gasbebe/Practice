@@ -1,3 +1,7 @@
+[TOC]
+
+
+
 # 1. 닷넷 프레임워크
 
 닷넷 프레임워크는 2002년 마소에서 발표한 응용프로그램 개발 환경으로서 프로세스 가상머신
@@ -24,7 +28,38 @@ C# 입장에서 C# 컴파일러는  소스코드를 기계어가 아닌 중간�
 
 ==============================================================================
 
+# System.Array
 
+소스코드에 정의되는 배열은 모두 System.Array 타입을 조상으로 둔다.
+
+| 멤버     | 타입              | 설명                                      |
+| -------- | ----------------- | ----------------------------------------- |
+| Rank     | 인스턴스 프로퍼티 | 배열의 인스턴스의 차원수(dimenstion) 반환 |
+| Length   | 인스턴스 프로퍼티 | 배열의 인스턴스의 요소수(element) 반환    |
+| Sort     | 정적 메서드       | 배열 요소를 값의 순서대로 정렬한다        |
+| GetValue | 인스턴스 메서드   | 지정된 인덱스의 배열의 요소 값을 반환한다 |
+| Copy     | 정적 메서드       | 배열의 내용을 다른 배열에 복사한다        |
+
+
+
+```c#
+class Program
+{
+    static void Main(string[] args)
+    {
+    	bool[,] bArray = new bool[,]{{true, false},{true, false}};
+        int[] iArray = new int[] {5,4,3,2,1};
+        
+        Array.Sort(iArray); //Sort 정적 메서드
+        
+        int[] copyArray = new int[iArray.Length];
+        Array.Copy(iArray, copyArray, iArray.Length); //Copy 정적 메서드
+        
+        Console.WriteLine("배열의 차워 수 : " + bArray.Rank);
+        Console.WriteLine("배열의 요소 수 : " + bArray.Length);
+    }
+}
+```
 
 
 
