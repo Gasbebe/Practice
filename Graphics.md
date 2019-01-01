@@ -183,3 +183,82 @@ Geometry Shader는 gpu상에서 동적으로 프리미티브(primitives, 메쉬�
 
 
 
+------
+
+Tangent vector(접선벡터)는 Normal vector(법선 벡터)와 수직인 벡터이다
+
+자, 그런데 문제는 Tangent Vector가 한두 녀석이 아니라는 것이다. Normal 에 수직인 벡터는 사실상 Normal Vector가 만들어내는 평면 위의 모든 벡터들이 해당된다.
+
+따라서 그래픽스에서는 통상적으로 텍스쳐 좌표인 UV 좌표와 비교하여 U좌표와 일치하는 Vector를  Tangent, V 좌표와 일치하는 Vector를 BiTangent Vector라고 일컫는다.
+그림으로 표현하면 아래와 같다.
+
+ (빨간색이 Tangent, 연두색이 BiTangent)![NTBFromUVs](http://rapapa.net/wp/wp-content/uploads/2014/12/NTBFromUVs.png)
+
+
+
+# Base Redering PipeLine
+
+------
+
+![deeppipeline.PNG](https://github.com/Gasbebe/Practice/blob/master/Image/shader/deeppipeline.PNG?raw=true)
+
+프로그램이 실행일 될때. 사용한 리소스를 저장장치에서 불러와 램에 저장
+
+cpu에서 렌더링상태와 메쉬들을 커맨드버퍼에  Queue함
+
+![cpu2gpu.png](https://github.com/Gasbebe/Practice/blob/master/Image/shader/cpu2gpu.png?raw=true)
+
+![cpu2gpu2.png](https://github.com/Gasbebe/Practice/blob/master/Image/shader/cpu2gpu2.png?raw=true)
+
+
+
+gpu는 커맨드 버퍼에 있는 메쉬, 렌더링상태 명령을 순차적으로 실행, shader에 정의되어 있다.
+
+gpu개발 회사마다 command queue의 처리방식은 다를수 있다.
+
+
+
+https://www.reddit.com/r/vulkan/comments/2xvhp3/potential_bottleneck_in_single_command_buffers/
+
+https://traxnet.wordpress.com/2011/07/18/understanding-modern-gpus-2/
+
+https://docs.microsoft.com/en-us/windows/desktop/direct3d9/state-blocks-save-and-restore-state
+
+how works gpu nvidia
+
+# ..
+
+GPGPU(General Purpose Graphic process unit)
+
+커널(kernel) : 커널은 GPU에서 실행되는 하나의 프로세스를 말하며 코드에서는 하나의 함수로서 다루어 집니다. 컴퓨트 쉐이더를 이용하면 동시에 여러 스레드에서 커널을 실행할 수 있습니다.
+
+스레드(thread) : 스레드는 3의 그룹으로 구성되는데 예를 들어 (4,1,1)이면 4 * 1 * 1 = 4개의 스레드가 동시에 실행됩니다
+
+그룹(group)  : 위에서 구성된 하나의 그룹은 GPU에서 동시에 스레들을 실행하는 단위가 되며 같은 그룹안에 속한 스레드들을  그룹 스레드라고 부릅니다. 나아가 컴퓨트 쉐이더는 여러 개의 그룹들도 한 번에 실행할 수 있는데, 이 떄 실행할 그룹의 수도 스레드 그룹처럼 3차원으로 구성할 수 있습니다.
+
+```c++
+//커널함수 정의
+#pragma kernel KernelFunctionA
+#pragma kernel KernelFunctionB
+ComputeBuffer intComputeBuffer;
+
+[(4,1,1)]
+void KernelFuctionA(uint3 groupID : SV_GroupID,
+                   uint3 groupThreadID : SV_GroupThreadID)
+{
+	//todo :: 커널함수의 처리내용
+    //스레드의 갯수 만큼 버퍼생성
+    intBuffer[groupThreadID.x] = groupThreadID.x * intValue;
+}
+
+void KernelFunctionB(uint3 groupID : SV_GroupID,
+                   uint3 groupThreadID : SV_GroupThreadID)
+{
+    //todo
+}
+
+```
+
+
+
+시간받아오기 3600 YYYY:MM:DD:HH:MM:SSSS
