@@ -137,3 +137,9 @@ T(n) = 0  if n = 1
 
 ​       T([n/2]) + T([n/2]) + n 
 
+벤다이어 그램으로 논리 만들기
+
+https://www.alanzucconi.com/
+
+http://halisavakis.com/category/blog-posts/
+

@@ -60,3 +60,11 @@ consider : 고려하다  considered : 깊이생각한
 assignment : 할당
 representation : 1. (특정한 방식으로의) 묘사, (어떤 것을) 나타낸 것   2. 대표자를 내세움, 대의권
 intrinsic :본질적인, 고유한
+
+
+$$
+tan\theta = 기울기 \; 
+\theta = arcsin\ y \; 
+\theta = arccos \ y \; 
+\theta = arctan\ y
+$$
