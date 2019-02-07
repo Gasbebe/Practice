@@ -1,3 +1,14 @@
+---
+layout: post
+title: "선형대수학"
+description: 선형대수학
+image: '\images\bg.jpg'
+category: 'Unity3D'
+tag:
+ - Unity3D
+introduction: 쉽게 풀어쓴 선형대수학
+---
+
 ##### Math
 
 $$
@@ -12,20 +23,71 @@ $$
 
 $$
 \begin{bmatrix}
-S_x & 0 & dx \\\
-0 & S_y & dy \\\
+S_x & 0 & 0 \\\
+0 & S_y & 0 \\\
 0 & 0 & S_z
 \end{bmatrix}
 \begin{bmatrix}
 x \\\
 y \\\
-1 
+z
 \end{bmatrix}
 $$
 
 
 
+##### move
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 & d_x \\\
+0 & 1 & 0 & d_y \\\
+0 & 0 & 1 & d_z \\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+
+\begin{bmatrix}
+x\\\
+y\\\
+z \\\
+1
+\end{bmatrix}
+$$
+
+
+
+##### rotation pitch(x axis), yaw(y axis),  roll(z axis)
+
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \\\
+0 & cos\theta & -sin\theta & 0 \\\
+0 & sin\theta & cos\theta & 0 \\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+
+\begin{bmatrix}
+cos\theta & 0 & sin\theta & 0 \\\
+0 & 1 & 0 & 0 \\\
+-sin\theta & 0 & cos\theta & 0 \\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+
+\begin{bmatrix}
+cos\theta & -sin\theta & 0 & 0 \\\
+sin\theta & cos\theta & 0 & 0 \\\
+0 & 0 & 1 & 0 \\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$
+
+
 ------
+
+
+
+
 
 
 
@@ -68,3 +130,10 @@ tan\theta = 기울기 \;
 \theta = arccos \ y \; 
 \theta = arctan\ y
 $$
+
+
+
+
+
+
+
