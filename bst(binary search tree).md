@@ -139,3 +139,171 @@ internal class Program
 
 ```
 
+그건 단순히 메모리의 총량이 많아서 생긴 문제가 아니라, 재귀 호출 스택과 지역 변수가 스택 영역을 사용하기 때문에 그런 것입니다. 스택 영역은 전체 메모리 한도와는 별개로 프로그래마다 배정이 되어 있는데, 이는 윈도우즈에서는 기본적으로 1MB, 리눅스에서는 8MB로 설정되어 있습니다. 하지만 이는 빌드 시에 설정을 따로 해줄 수 있고, BOJ에서는 제가 알기로는 64MB 정도까지 스택을 허용하기 때문에 문제가 되지 않습니다.
+
+# algorithm
+
+```c++
+#include <iostream>
+#include <algorithm>
+#include <stack>
+
+namespace std;
+bool compare(int a, int b){
+    return a > b;
+}
+class bts{
+    public:
+    	bts* leftNode;
+    	bts* rightNode;
+    private:
+    	bts();
+    	~bts();
+    
+}
+int main(){
+    int a[10] = {9,4,2,4,5,6,67,3,66,4};
+    //오름차순
+    sort(a, a + 10);
+    //내림차순
+    sort(a, a + 10, compare);
+	return 0;    
+}
+```
+
+
+
+```c++
+class Student{
+    public: 
+    	string name;
+    	int score;
+    Student(string name, int score){
+        this->name = name;
+        this->score = score;
+    }
+    
+    bool operator <(Student &student){
+        return this->score < student.score;
+    }
+};
+
+int main(void){
+    Student student[] = {
+      	Student("1", 90),
+        Student("2", 44),
+        Student("3", 77),
+        Student("4", 88),
+        Student("5", 33),
+    };
+    sort(student, student + 5);
+}
+
+
+```
+
+
+
+```c++
+#include<iostream>
+#include<vector>
+#include<algorithm>
+
+using namespace std;
+
+bool compare(pair<string, pair<int, int>> a,
+             pair<string, pair<int, int>> b){
+    if(a.second.first == b.second.first){
+        return a.second.second > b.second.second;
+    }else{
+        return a.second.first > b.second.first;
+    }
+}
+
+int main(void){
+	vector<pair<int, string>> v;
+    v.push_back(pair<int, string>(90, "1"));
+    v.push_back(pair<int, string>(77, "1"));
+    v.push_back(pair<int, string>(88, "1"));
+    v.push_back(pair<int, string>(55, "1"));
+    v.push_back(pair<int, string>(66, "1"));
+    
+    sort(v.begin(), v.end);
+    for(int i = 0;  i< v.size(); i++){
+        cout << v[i].second << ' '; 
+    }
+    
+    vector <pair<string, pair<int, int> > > v2;
+    v2.push_back(pair<string, pair<int, int > >("11", 99, 99));
+    v2.push_back(pair<string, pair<int, int > >("11", 77, 55));
+    v2.push_back(pair<string, pair<int, int > >("11", 99, 88));
+    v2.push_back(pair<string, pair<int, int > >("11", 11, 922));
+    v2.push_back(pair<string, pair<int, int > >("11", 33, 99));
+}
+```
+
+
+
+# Counting Sort
+
+범위조건이 있는 경우에 한해서 괴장히 빠른 정렬 크기를 기준으로 갯수만 세주면 되기 때문에
+
+```c++
+int main(void){
+	int temp
+	int count[5];
+    return 0;
+    
+    for(int i = 0;  i < 5;  i++){
+        count[i] = 0;
+    }
+    
+    for(int i = 0; i < 30; i++){
+        count[array[i] - 1]++;
+    }
+    for(int i= 0; i < 5; i++){
+        if(count[i] != 0){
+            for(int j = 0; j < count[i]; j++){
+                printf("%d", i + 1);
+            }
+        }
+    }
+}
+```
+
+
+
+# Topology sort
+
+##### 위상 정렬 `Topology sort`  여러 가지 조건이 결합된 그래프 상에서 경로를 찾기 위한 알고리즘으로 큐  `Queue`를 사용하는 위상 정렬
+
+```c++
+#include <iostream>
+#include <queue>
+#include <vector>
+#define MAX 10
+
+using namespace std;
+
+int n, inDefree[MAX];
+vector<int> a[MAX];
+
+int main(void){
+    int result[MAX];
+    queue<int> q;
+    for(int i=0 i <= n; i++){
+        if(inDegree[i] == 0) q.push(i);
+    }
+    
+    for(int i=0; i<= n; i++){
+        if(q.empty()){
+            return;
+        }
+        int x = q.front();
+        q.pop();
+        result[i] = x;
+    }
+    return 0;
+}
+```
+
