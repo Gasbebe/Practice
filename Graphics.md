@@ -262,3 +262,4 @@ void KernelFunctionB(uint3 groupID : SV_GroupID,
 
 
 시간받아오기 3600 YYYY:MM:DD:HH:MM:SSSS
+
