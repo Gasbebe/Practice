@@ -63,7 +63,21 @@ class Program
 
 
 
+```c#
+using System;
 
+namespace Test
+{
+    class Program
+    {
+         static void Main(string[] args)
+         {
+			string read = Console.ReadLine();//함수명 그대로 한줄 읽기 \n 문자가 나올때까지의 문자를 읽는다.
+
+         }
+    }
+}
+```
 
 
 
