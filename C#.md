@@ -22,12 +22,6 @@ C# 입장에서 C# 컴파일러는  소스코드를 기계어가 아닌 중간�
 
 
 
-==============================================================================
-
-차근차근 정리할것
-
-==============================================================================
-
 # System.Array
 
 소스코드에 정의되는 배열은 모두 System.Array 타입을 조상으로 둔다.
@@ -81,7 +75,117 @@ namespace Test
 
 
 
+#### scope
+
+```c#
+using System;
+
+namespace Test
+{
+    class Program
+    {
+         static void Main(string[] args)
+         {
+		
+		      //괄호를 스코프를 지정할수 있다 scope1
+             {
+                 int number = 0;
+             }
+             //scope2
+             {
+                 int number = 1;
+             }
+         }
+    }
+}
+```
 
 
 
+#### ref
+
+```c#
+using System;
+
+namespace Test
+{
+    class Program
+    {
+         static void Main(string[] args)
+         {
+			double number = 5f;
+            Square(ref number);
+         }
+    }
+}
+```
+
+
+
+---
+
+#### 너무 많이 함수 만들때 문제점
+
+함수가 일단 있다는 건 누구든지 그 함수를 여러 곳에서 사용할 수 있다는 것
+
+`버그나 기능 확장을 위해 그 함수를 변경`하려면 다른 사람들이 잘못된 가정을 하진 않았는지 확인해야 함
+
+#### 베스트 프랙티스 : 함수는 언제 만들까?
+
+- 현재 존재하는 혹은 향후에 발생 가능성이 높은 코드 중복을 피하고자 할 때
+- 코드 중복은 좋지 않음 -> 다음 사람이 중복 코드에 있는 버그를 고칠때, 모든 코드를 수정할 것이라는 보장이 없기 때문
+
+#### 베스트 프랙티스 : 함수 대신 중괄호
+
+- 함수가 길어지면 동일한 이름의 지역 변수가 생기는 경우가 있음-> 중괄호를 사용하여 범위를 분리시키면 문제 해결 가능!(scope)
+
+#### 베스트 프랙티스 : 함수 대신 #region와 #endregion
+
+- C#전용
+- 비주얼 스튜디오에서 코드를 접거나 펼 수 있게 해줌
+
+#### 결론
+
+함수는 코드 중복을 피하기 위해서 만드세요
+
+만약 처음부터 함수를 만들기 어렵다면 함수 없이 코드를 모두 다 작성하고, 그 다음에 함수로 분리하세요.
+
+
+
+#### 열거형(enum)
+
+---
+
+```c#
+using System;
+
+namespace Test
+{
+    class Program
+    {
+         static void Main(string[] args)
+         {
+			public enum EState
+            {
+                Idle = 1,
+                Atk = 1 << 1,
+                Die = 1 << 2
+            }
+             EState state = EState.Idle;
+             
+             //enum꼼수 - 배열 만들기
+             enum EDirection
+             {
+                 North,
+                 South,
+                 East,
+                 West,
+                 Max,
+             }
+             //어느 함수
+             string[] directions = new string[(int)EDirection.Max];
+         }
+    }
+}
+```
 
