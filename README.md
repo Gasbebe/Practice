@@ -8,3 +8,4 @@
 - 필터 : 골라서 가져온다는 의미가 크다
 - draft는 문서에서 초안이라는 의미를 가진다
 - https://wiki.kldp.org/HOWTO/html/Adv-Bash-Scr-HOWTO/ Bash Script 
+- definition라는 단어가 나오면 다 구현이 되어있는 상태를 말한다
