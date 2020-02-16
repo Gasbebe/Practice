@@ -16,3 +16,6 @@
 - https://storyprogramming.com/category/unity/
 - 마둠파 https://blog.naver.com/mnpshino
 - https://blog.naver.com/plasticbag0
+- App, Process, Thread
+- buffer
+- RestAPI
