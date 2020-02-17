@@ -19,3 +19,4 @@
 - App, Process, Thread
 - buffer
 - RestAPI
+- 인터럽트
