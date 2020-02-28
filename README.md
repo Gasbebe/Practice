@@ -1,5 +1,5 @@
 # practice
-그냥 끄적거리는곳 블로그 올리기전에 집어넣을곳
+그냥 잡다한것, 모르는 것, 정리할 것
 ---
 
 # 일지
@@ -21,3 +21,5 @@
 - RestAPI
 - 인터럽트
 - 문자 데이터를 다룰때 용도에 따라 화이트스페이스, \n \r  다 제거하기
+- TCU : Transmission Cotrol Unit
+- RTE : Runtime Environment
