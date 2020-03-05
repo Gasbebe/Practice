@@ -23,3 +23,6 @@
 - 문자 데이터를 다룰때 용도에 따라 화이트스페이스, \n \r  다 제거하기
 - TCU : Transmission Cotrol Unit
 - RTE : Runtime Environment
+- std::bind 파라미터의 받는 순서를 변경 할수도 있다
+- void*, function pointer?
+
