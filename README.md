@@ -28,4 +28,5 @@
 - 동적 라이브러리, 정적 라이브러리?
 - 이미지, 빌드
 - https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%94%84%EB%B0%B1 네트워크 lo
+- 이스케이프 문자 /0x0b /0x5b
 
