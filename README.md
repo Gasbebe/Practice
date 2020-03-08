@@ -26,4 +26,5 @@
 - std::bind 파라미터의 받는 순서를 변경 할수도 있다
 - void*, function pointer? = generic pointer
 - 동적 라이브러리, 정적 라이브러리?
+- 이미지, 빌드
 
