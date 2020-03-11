@@ -29,4 +29,4 @@
 - 이미지, 빌드
 - https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%94%84%EB%B0%B1 네트워크 lo
 - 이스케이프 문자 /0x0b /0x5b
-
+- cpp에서 형변환 할때 (const void)* const (void*) 괄호나 위치 때문에 문제가 생길수 있다 조심하자
