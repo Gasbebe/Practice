@@ -33,3 +33,4 @@
 - vector.data로 포인트를 받아 포인터형식으로 데이터를 추가하여도 vector크기는 증가한게 아니라 resize로 다시 잡아주거나 push.back을 해줘야한다
 - https://d2.naver.com/helloworld/267396
 - https://jacking75.github.io/
+- LLP64
