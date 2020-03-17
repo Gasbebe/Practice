@@ -34,3 +34,4 @@
 - https://d2.naver.com/helloworld/267396
 - https://jacking75.github.io/
 - LLP64
+- https://m.blog.naver.com/PostView.nhn?blogId=tipsware&logNo=221065382244&proxyReferer=https%3A%2F%2Fwww.google.com%2F
