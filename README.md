@@ -38,3 +38,4 @@
 - https://riptutorial.com/csharp/example/304/chaining-methods
 - so파일에 적히는 함수명은 c, cpp다르게 적힌다 cpp는 override가 있기 때문이다
 - 네임맹글링 = 네임 
+- https://m.blog.naver.com/PostView.nhn?blogId=tipsware&logNo=221065382244&proxyReferer=https%3A%2F%2Fwww.google.com%2F
