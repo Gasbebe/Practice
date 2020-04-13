@@ -40,3 +40,5 @@
 - 네임맹글링 = 네임 
 - https://m.blog.naver.com/PostView.nhn?blogId=tipsware&logNo=221065382244&proxyReferer=https%3A%2F%2Fwww.google.com%2F
 - c는 컴파일할떄 헤더파일을 포함 안해도 선언한 함수이름의 정의를 알아서 찾아 링크 해준다
+- 디버그가 힘든 환경이 존재 할떄는 로그를 잘찍어야한다
+- 오류, 원인을 찾기 위해 분석을 해라
