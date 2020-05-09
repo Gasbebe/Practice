@@ -25,7 +25,8 @@
 - RTE : Runtime Environment
 - std::bind 파라미터의 받는 순서를 변경 할수도 있다
 - void*, function pointer? = generic pointer
-- 동적 라이브러리, 정적 라이브러리?
+- 동적 라이브러리, 정적 라이브러리(모듈) -fPIC?
+- 상속은 is a 관계에서 많이 쓰인다
 - 이미지, 빌드
 - https://ko.wikipedia.org/wiki/%EB%A3%A8%ED%94%84%EB%B0%B1 네트워크 lo
 - 이스케이프 문자 /0x0b /0x5b
