@@ -52,3 +52,4 @@
 - https://en.wikipedia.org/wiki/ANSI_escape_code
 - 데이터타입을 비트나 바이트단위로 자주 생각하자 int64도 캐스트만 잘하면 모든 데이터를 담을 수 있다
 - internal이라는 키워드에 변수로 이름을 정할때 플랫폼경우에는 이 키워드가 붙어있는 변수를 몰라두 되고 건드리지 말라는 뜻으로 많이 쓰인다
+- https://halisavakis.com/my-take-on-shaders-spherical-mask-dissolve/
