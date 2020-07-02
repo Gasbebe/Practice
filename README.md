@@ -55,4 +55,5 @@
 - https://halisavakis.com/my-take-on-shaders-spherical-mask-dissolve/_
 - mbcs
 - noexcept(false) : 쓰는 함수의 define봐서 throw가 있을때, 적절하게 예외처리를 할 수 없을때
-- noexcept : throw가 없을때 try catch에서 처리 , 적절하게 예외처리를 할 수 
+- noexcept : throw가 없을때 try catch에서 처리 , 적절하게 예외처리를 할 수 있을때
+- std::move(m)를 사용했는데 그 다음줄에서 m을 사용하여 앱이 이상동작함, 신경쓸것
