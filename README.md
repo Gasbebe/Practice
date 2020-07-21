@@ -58,3 +58,4 @@
 - noexcept : throw가 없을때 try catch에서 처리 , 적절하게 예외처리를 할 수 있을때
 - std::move(m)를 사용했는데 그 다음줄에서 m을 사용하여 앱이 이상동작함, 신경쓸것
 - https://en.m.wikipedia.org/wiki/Projectile_motion
+- 데이터를 쓰고 있을때 그 데이터를 읽는것은 상관이 없다(lock, unlock 안해두 됨)
