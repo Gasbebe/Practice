@@ -59,3 +59,4 @@
 - std::move(m)를 사용했는데 그 다음줄에서 m을 사용하여 앱이 이상동작함, 신경쓸것
 - https://en.m.wikipedia.org/wiki/Projectile_motion
 - 데이터를 쓰고 있을때 그 데이터를 읽는것은 상관이 없다(lock, unlock 안해두 됨)
+- 이벤트 콜백함수에 여러개에 함수가 등록 되어있을때 e.handle = true로 해주면 이 이벤트 콜백 함수는 처리되었다는 뜻이고 등록되어 있는 나머지 함수들은 호출하지 않는다(wpf)
