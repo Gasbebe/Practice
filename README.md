@@ -65,4 +65,4 @@
 - oop soild원칙중 단일책임 원칙 계속 생각하면서 구현하기
 - https://www.youtube.com/embed/32OaU7DXTE0?autoplay=1&modestbranding=1&rel=0&mute=0
 - https://lifeisforu.tistory.com/432
-
+- https://raytracing.github.io/books/RayTracingInOneWeekend.html
