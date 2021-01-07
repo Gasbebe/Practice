@@ -63,7 +63,6 @@
 - https://social.technet.microsoft.com/wiki/contents/articles/12347.wpf-howto-add-a-debugoutput-console-to-your-application.aspx cosole hook(wpf)
 - 편법 보다는 원칙대로 기능을 구현해라, 나중에 꼬일수도 있다
 - oop soild원칙중 단일책임 원칙 계속 생각하면서 구현하기
-- https://www.youtube.com/embed/32OaU7DXTE0?autoplay=1&modestbranding=1&rel=0&mute=0
 - https://lifeisforu.tistory.com/432
 - https://raytracing.github.io/books/RayTracingInOneWeekend.html
 - python.exe -m pip install xmltodict
