@@ -66,3 +66,4 @@
 - https://lifeisforu.tistory.com/432
 - https://raytracing.github.io/books/RayTracingInOneWeekend.html
 - python.exe -m pip install xmltodict
+- 마샬링 marshalling
