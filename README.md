@@ -67,3 +67,4 @@
 - https://raytracing.github.io/books/RayTracingInOneWeekend.html
 - python.exe -m pip install xmltodict
 - 마샬링 marshalling
+- sudo apt-get install -y python3-jinja
