@@ -68,3 +68,4 @@
 - python.exe -m pip install xmltodict
 - 마샬링 marshalling
 - sudo apt-get install -y python3-jinja
+- 임베디드의 기본은 버튼과 포트?
