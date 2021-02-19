@@ -69,3 +69,7 @@
 - 마샬링 marshalling
 - sudo apt-get install -y python3-jinja
 - 임베디드의 기본은 버튼과 포트?
+- ASCII를 어디선가 변환하여 보낸 문자 앞에 3바이트가 붙는 문제 발생함 EF BB BF(UTF-8)이 였음, ASCII가 UTF-8로 변환 됨
+ - https://docs.microsoft.com/en-us/windows/win32/intl/using-byte-order-marks
+ - https://ko.wikipedia.org/wiki/UTF-8
+- FF FE로 할 수 있고 	UTF-16, little endiand이다
