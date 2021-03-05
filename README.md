@@ -73,3 +73,4 @@
   - https://docs.microsoft.com/en-us/windows/win32/intl/using-byte-order-marks
   - https://ko.wikipedia.org/wiki/UTF-8
 - FF FE로 할 수 있고 	UTF-16, little endiand이다
+- python3, jinja2, c#, c++, wpf, unity3d
