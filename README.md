@@ -78,3 +78,4 @@
 - tcb, pcb
 - context swiching
 - io port, duel port, duel memory
+- ${CMAKE_CURRENT_SOURCE_DIR} 
