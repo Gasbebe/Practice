@@ -79,3 +79,4 @@
 - context swiching
 - io port, duel port, duel memory
 - ${CMAKE_CURRENT_SOURCE_DIR} 
+- python 3.6.8 버전 중요 clang-format.exe 중요, path 아직도 오류
