@@ -80,3 +80,4 @@
 - io port, duel port, duel memory
 - ${CMAKE_CURRENT_SOURCE_DIR} 
 - python 3.6.8 버전 중요 clang-format.exe 중요, path 아직도 오류
+- wpf에서 exe파일 부를때 멈추는 경우가 있었는데 순식간에 많이 발생하는 로그를 리다이렉트로 대기해서 났던 오류, 일단 막아놓고 돌리는중(고칠것)
