@@ -42,21 +42,26 @@ for key1, val1 in pl['frames'].items():
 root = Tk()
 root.title("Image Viewer")
  
-canvas = Canvas(root, width = 1000, height = 1000)  
+canvas = Canvas(root, width = 500, height = 500, background= "black")  
 canvas.pack()
  
 count = 0
 threadFlag = False
 def button_pressed():
     print("hello")
-    event.set()
+    if event.is_set() is False :
+        event.set()
+    else :
+        event.clear()
+        t = Thread(target=animation)
+        t.start()
     
 def animation():
     while(True):
         global count
         img = ImageTk.PhotoImage(imageList[count])
         count = (count + 1)% len(imageList)
-        canvas.create_image(350, 200, anchor=SE, image=img)
+        canvas.create_image(350, 200, anchor=NE, image=img)
         canvas.image = img
         time.sleep(0.05)
         if event.is_set() :
@@ -74,7 +79,6 @@ button = Button(
 
 button.pack()
 
-t = Thread(target=animation)
-t.start()
+
 root.mainloop()
 #t.join()
