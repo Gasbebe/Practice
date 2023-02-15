@@ -26,3 +26,49 @@ for key1, val1 in pl['frames'].items():
                 print('Match found: ', m)
             else:
                 print('No match')
+                #
+                
+                import glob
+from tkinter import *
+from tkinter import filedialog
+
+def button_pressed():
+    print(entry.get())
+    entry.insert(index=END, string=", World!")
+    # entry.delete(0, END)
+
+def browse_button():
+    filename = filedialog.askdirectory()
+    #filedialog.
+    #print(filename)
+    entry.insert(index=END, string=filename)
+    for file in glob.glob(filename + "\*", recursive=True):
+        print(file)
+    return filename
+
+window = Tk()
+
+entry = Entry(
+    master=window, fg="black", bg="yellow", width=30, justify=CENTER, font=("Arial", 25)
+)
+
+button = Button(
+    master=window,
+    text="클릭하세요",
+    bg="white",
+    fg="blue",
+    width=80,
+    height=2,
+    command=browse_button,
+)
+
+
+entry.pack()
+button.pack()
+
+window.mainloop()
+
+
+# search all files inside a specific folder
+# *.* means file name with any extension
+dir_path = r'E:\demos\files_demos\account\**\*.*'
